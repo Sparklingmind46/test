@@ -20,7 +20,7 @@ def send_welcome(message):
     sticker_id = 'CAACAgUAAxkBAAECEpdnLcqQbmvQfCMf5E3rBK2dkgzqiAACJBMAAts8yFf1hVr67KQJnh4E'
     sent_sticker = bot.send_sticker(message.chat.id, sticker_id)
     sticker_message_id = sent_sticker.message_id
-    time.sleep(3)
+    time.sleep(2)
     bot.delete_message(message.chat.id, sticker_message_id)
     
     # Define the inline keyboard with buttons
@@ -35,11 +35,11 @@ def send_welcome(message):
     markup.add(InlineKeyboardButton("•Dᴇᴠᴇʟᴏᴘᴇʀ• ☘", url="https://t.me/Ur_amit_01"))
     
     # Send the photo with the caption and inline keyboard
-    image_url = 'https://envs.sh/jxZ.jpg'
+    image_url = 'https://graph.org/file/0f1d046b4b3899e1812bf-0e63e80abb1bef1a8b.jpg'
     bot.send_photo(
         message.chat.id, 
         image_url, 
-        caption="•Hello there, Welcome💓✨\n• I can merge PDFs (Max= 20MB per file).\n• Send PDF files 📕 to merge and use /merge when you're done.",
+        caption="Aʜ, ᴀ ɴᴇᴡ ᴛʀᴀᴠᴇʟᴇʀ ʜᴀs ᴀʀʀɪᴠᴇᴅ... Wᴇʟᴄᴏᴍᴇ ᴛᴏ ᴍʏ ᴍᴀɢɪᴄᴀʟ ʀᴇᴀʟᴍ !🧞‍♂️✨\n\n• I ᴀᴍ PDF ɢᴇɴɪᴇ, ɪ ᴡɪʟʟ ɢʀᴀɴᴛ ʏᴏᴜʀ ᴘᴅғ ᴡɪsʜᴇs! 📑🪄",
         reply_markup=markup
     )
 
@@ -47,20 +47,20 @@ def send_welcome(message):
 def callback_handler(call):
     # Define media and caption based on the button clicked
     if call.data == "help":
-        new_image_url = 'https://envs.sh/jxZ.jpg'
+        new_image_url = 'https://graph.org/file/0f1d046b4b3899e1812bf-0e63e80abb1bef1a8b.jpg'
         new_caption = "Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.:\n1. Send PDF files.\n2. Use /merge when you're ready to combine them.\n3. Max size = 20MB per file.\n\n• Note: My developer is constantly adding new features in my program , if you found any bug or error please report at @Ur_Amit_01"
         # Add a "Back" button
         markup = InlineKeyboardMarkup()
         markup.add(InlineKeyboardButton("Back", callback_data="back"))
     elif call.data == "about":
     # Get the bot's username dynamically
-        new_image_url = 'https://envs.sh/jxZ.jpg'
+        new_image_url = 'https://graph.org/file/0f1d046b4b3899e1812bf-0e63e80abb1bef1a8b.jpg'
         new_caption = ABOUT_TXT
         markup = InlineKeyboardMarkup().add(InlineKeyboardButton("Back", callback_data="back"))
     elif call.data == "back":
         # Go back to the start message
-        new_image_url = 'https://envs.sh/jxZ.jpg'
-        new_caption = "*Welcome💓✨\n• I can merge PDFs (Max= 20MB per file).\n• Send PDF files 📕 to merge and use /merge when you're done.*"
+        new_image_url = 'https://graph.org/file/0f1d046b4b3899e1812bf-0e63e80abb1bef1a8b.jpg'
+        new_caption = "Aʜ, ᴀ ɴᴇᴡ ᴛʀᴀᴠᴇʟᴇʀ ʜᴀs ᴀʀʀɪᴠᴇᴅ... Wᴇʟᴄᴏᴍᴇ ᴛᴏ ᴍʏ ᴍᴀɢɪᴄᴀʟ ʀᴇᴀʟᴍ !🧞‍♂️✨\n\n• I ᴀᴍ PDF ɢᴇɴɪᴇ, ɪ ᴡɪʟʟ ɢʀᴀɴᴛ ʏᴏᴜʀ ᴘᴅғ ᴡɪsʜᴇs! 📑🪄"
         # Restore original keyboard with Help, About, and Developer buttons
         markup = InlineKeyboardMarkup()
         markup.row_width = 2
